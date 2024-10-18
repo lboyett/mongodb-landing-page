@@ -33,7 +33,7 @@ export default function Navbar() {
   }
   return (
     <div
-      className={`navbar flex items-center p-6 font-light border-b border-mongodb-borderNav`}
+      className={`navbar flex items-center p-6 font-light border-b border-mongodb-borderNav ${searchIsOpen ? 'navbar-search-open' : 'navbar-search-closed'}`}
     >
       <img
         src={logo.src}

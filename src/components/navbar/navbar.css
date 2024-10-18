@@ -1,7 +1,6 @@
 .navbar {
   position: relative;
   z-index: 11;
-  overflow: hidden;
 }
 
 .navbar-list li {
@@ -9,14 +8,19 @@
   align-items: center;
 }
 
+@keyframes delay-overflow {
+  from {
+    overflow: hidden;
+  }
+}
+
 .navbar-search-open {
-  transition: opacity 0.3s;
-  opacity: 0.5;
+  overflow: hidden;
 }
 
 .navbar-search-closed {
-  transition: opacity 0.3s;
-  opacity: 1;
+  overflow: visible;
+  animation: 0.3s delay-overflow;
 }
 
 .navbar-list li:hover {
