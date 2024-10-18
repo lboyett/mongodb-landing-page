@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Euclid';
-  src: url('/fonts/euclid-circular-a/euclid-light.ttf') format('truetype');
+  src: url('/mongodb-landing-page/fonts/euclid-circular-a/euclid-light.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,7 +9,7 @@
 
 @font-face {
   font-family: 'Source Code Pro';
-  src: url('/fonts/source-code-pro/source-code-pro-regular.ttf')
+  src: url('/mongodb-landing-page/fonts/source-code-pro/source-code-pro-regular.ttf')
     format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -17,14 +18,16 @@
 
 @font-face {
   font-family: 'Value Serif';
-  src: url('/fonts/value-serif/value-serif.ttf') format('truetype');
+  src: url('/mongodb-landing-page/fonts/value-serif/value-serif.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Garamond';
-  src: url('/fonts/garamond/garamond.ttf') format('truetype');
+  src: url('/mongodb-landing-page/fonts/garamond/garamond.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
