@@ -1,5 +1,6 @@
 .navbar {
-  overflow: hidden;
+  position: relative;
+  z-index: 11;
 }
 
 .navbar-list li {
@@ -45,6 +46,7 @@
 }
 
 .company-dialog {
+  border: 1px solid black;
   position: absolute;
   top: 50px;
   left: -300px;
