@@ -1,6 +1,7 @@
 .navbar {
   position: relative;
   z-index: 11;
+  overflow: hidden;
 }
 
 .navbar-list li {
