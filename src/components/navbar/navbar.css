@@ -1,0 +1,104 @@
+.navbar-list li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list li:hover {
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'wght' 300;
+}
+
+.navbar-button {
+  transition: border-radius 0.1s;
+}
+
+.navbar-button:hover {
+  border-radius: 50px;
+}
+
+.company-dialog {
+  position: absolute;
+  top: 50px;
+  left: -300px;
+  box-shadow: rgba(0, 0, 0, 0.182) 0px 0px 15px;
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(245, 247, 250);
+  z-index: 100;
+}
+
+.company-dialog * {
+  background-color: white;
+}
+
+.company-dialog > div {
+  /* border: 1px solid gray; */
+}
+
+.dialog-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dialog-closed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.company-dialog h2 {
+  font-weight: 500;
+}
+
+.company-dialog h3 {
+  font-size: 14px;
+  color: rgb(83, 83, 83);
+}
+
+.company-dialog-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
+  column-gap: 12px;
+  padding: 32px 0 0 32px;
+  border-radius: 24px 0 0 24px;
+}
+
+.company-dialog-right {
+  background-color: rgb(245, 247, 250);
+  border-radius: 0 24px 24px 0;
+}
+
+.company-dialog-right h4 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.company-dialog-right h5 {
+  font-size: 12px;
+}
+
+.lets-chat {
+  color: rgb(0, 108, 250);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-dialog-right > div {
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-dialog-right > div:first-child {
+  border-radius: 0 24px 0 0;
+}
+.company-dialog-right > div:nth-child(2) {
+  border-radius: 0 0 24px 0;
+}

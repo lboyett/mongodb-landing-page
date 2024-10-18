@@ -1,0 +1,112 @@
+.index-body-container {
+  padding: 64px 36px;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+.index-body-container * {
+  z-index: 10;
+  position: relative;
+}
+
+.mongodb-atlas {
+  font-family: 'Source Code Pro';
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.mongodb-atlas-bar {
+  width: 2px;
+  height: 10px;
+}
+
+.index-body-header {
+  font-size: 72px;
+  margin-top: 40px;
+  font-family: 'Garamond';
+  font-weight: 100;
+  line-height: 1.4em;
+}
+
+.rotating-span {
+  font-family: 'Source Code Pro';
+  border: 2px solid rgb(184, 184, 184);
+  border-radius: 16px;
+  padding: 0px 24px;
+  background: linear-gradient(91deg, rgb(0, 170, 87) 0%, rgb(0, 104, 74) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 64px;
+  transition: all 0.5s;
+}
+
+.fade-in-span {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.fade-out-span {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.index-body-container p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Euclid';
+  margin-top: 32px;
+  max-width: 75%;
+}
+
+.index-body-container .wave {
+  height: 120%;
+  position: absolute;
+  top: -10px;
+  right: 80px;
+}
+
+.body-background {
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(8, 29, 42);
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0) scale(2.5);
+  }
+  100% {
+    transform: translate(-500px) scale(2.5);
+    /* The image width */
+  }
+}
+
+.first-row-img {
+  position: absolute;
+  height: 150px;
+  top: -124px;
+  right: 150px;
+  animation: slide 30s linear infinite;
+}
+
+.second-row-img {
+  position: absolute;
+  height: 150px;
+  top: 250px;
+  animation: slide 30s linear infinite;
+}
+
+.third-row-img {
+  position: absolute;
+  height: 150px;
+  top: 624px;
+  right: 150px;
+
+  animation: slide 30s linear infinite;
+}
