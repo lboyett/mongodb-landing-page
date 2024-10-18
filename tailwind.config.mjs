@@ -7,7 +7,7 @@ export default {
     extend: {
       colors: {
         mongodb: {
-          text: 'rgb(8,49,22)',
+          text: 'rgb(0,30,43)',
           button: 'rgb(0,237,100)',
           border: 'rgb(8,49,22)',
           borderNav: 'rgb(186,196,194)',

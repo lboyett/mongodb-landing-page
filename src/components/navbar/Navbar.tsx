@@ -4,11 +4,45 @@ import logo from '../../assets/logo.svg';
 
 export default function Navbar() {
   const [dialogIsOpen, setDialogIsOpen] = useState(false);
+  const [searchIsOpen, setSearchIsOpen] = useState(false);
 
+  function toggleDialog(event: any) {
+    if (!dialogIsOpen) {
+      if (event.target instanceof HTMLSpanElement) {
+        event.target.classList.remove('down-arrow');
+        event.target.classList.add('up-arrow');
+      } else if (event.target instanceof HTMLLIElement) {
+        event.target.children[0].classList.remove('down-arrow');
+        event.target.children[0].classList.add('up-arrow');
+      }
+    } else {
+      if (event.target instanceof HTMLSpanElement) {
+        event.target.classList.remove('up-arrow');
+        event.target.classList.add('down-arrow');
+      } else if (event.target instanceof HTMLLIElement) {
+        event.target.children[0].classList.remove('up-arrow');
+        event.target.children[0].classList.add('down-arrow');
+      }
+    }
+
+    setDialogIsOpen(!dialogIsOpen);
+  }
+
+  function toggleSearch() {
+    setSearchIsOpen(!searchIsOpen);
+  }
   return (
-    <div className="flex items-center p-6 font-light border-b border-mongodb-borderNav">
-      <img src={logo.src} alt="" className="w-[126px]" />
-      <ul className="navbar-list flex items-center gap-10 ml-10">
+    <div
+      className={`navbar flex items-center p-6 font-light border-b border-mongodb-borderNav`}
+    >
+      <img
+        src={logo.src}
+        alt=""
+        className={`w-[126px] ${searchIsOpen ? 'navbar-search-open' : 'navbar-search-closed'}`}
+      />
+      <ul
+        className={`navbar-list relative flex items-center gap-10 ml-10 ${searchIsOpen ? 'navbar-list-search-open' : 'navbar-list-search-closed'}`}
+      >
         <li className="flex items-center">
           Products
           <span className="material-symbols-outlined text-base">
@@ -21,7 +55,10 @@ export default function Navbar() {
             keyboard_arrow_down
           </span>
         </li>
-        <li className="flex items-center">
+        <li
+          className="flex items-center"
+          onClick={event => toggleDialog(event)}
+        >
           Solutions
           <span className="material-symbols-outlined text-base">
             keyboard_arrow_down
@@ -29,7 +66,7 @@ export default function Navbar() {
         </li>
         <li
           className="flex items-center relative"
-          onClick={() => setDialogIsOpen(!dialogIsOpen)}
+          onClick={event => toggleDialog(event)}
         >
           Company
           <span className="material-symbols-outlined text-base">
@@ -91,11 +128,41 @@ export default function Navbar() {
           </div>
         </li>
         <li className="flex items-center">Pricing</li>
+        <div className="search-div">
+          <input
+            type="text"
+            placeholder="Search products, whitepapers, & more"
+          />
+          <input type="text" placeholder="General Information" />
+          <span
+            onClick={() => toggleSearch()}
+            className="material-symbols-outlined search-button-interior bg-mongodb-text"
+          >
+            search
+          </span>
+        </div>
       </ul>
       <div className="grow"></div>
-      <ul className="navbar-list flex items-center gap-10 ml-10">
+      <ul
+        className={`navbar-list flex items-center gap-10 ml-10 ${searchIsOpen ? 'navbar-search-open' : 'navbar-search-closed'}`}
+      >
         <li>
-          <span className="material-symbols-outlined">search</span>
+          {!searchIsOpen ? (
+            <span
+              onClick={() => toggleSearch()}
+              className="material-symbols-outlined"
+            >
+              search
+            </span>
+          ) : (
+            <span
+              onClick={() => toggleSearch()}
+              className="material-symbols-outlined"
+            >
+              close
+            </span>
+          )}
+
           <span className="material-symbols-outlined ml-10">language</span>
           <div className="ml-2">Eng</div>
           <span className="material-symbols-outlined text-base ml-1">

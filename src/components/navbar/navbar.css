@@ -1,10 +1,35 @@
+.navbar {
+  overflow: hidden;
+}
+
 .navbar-list li {
   display: flex;
   align-items: center;
 }
 
+.navbar-search-open {
+  transition: opacity 0.3s;
+  opacity: 0.5;
+}
+
+.navbar-search-closed {
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
 .navbar-list li:hover {
   cursor: pointer;
+  color: #00684a;
+}
+
+.navbar-list-search-open {
+  transform: translate(0, 100px);
+  transition: all 0.3s;
+}
+
+.navbar-list-search-closed {
+  transform: translate(0);
+  transition: all 0.3s;
 }
 
 .material-symbols-outlined {
@@ -101,4 +126,58 @@
 }
 .company-dialog-right > div:nth-child(2) {
   border-radius: 0 0 24px 0;
+}
+
+.up-arrow {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+.down-arrow {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+.search-div {
+  width: 600px;
+  height: 3.5em;
+  position: absolute;
+  top: -115px;
+  display: flex;
+  align-items: center;
+  background: white;
+  visibility: visible;
+  opacity: 1.5;
+  gap: 8px;
+}
+
+.search-div input {
+  border: 1px solid gray;
+  height: 2.5rem;
+  border-radius: 4px;
+  padding: 0 0 0 12px;
+}
+
+.search-div input:first-child {
+  width: 60%;
+}
+
+.search-div input:nth-child(2) {
+  width: 40%;
+}
+
+.search-button-interior {
+  height: 2.5rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 3px;
+}
+
+.search-button-interior:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  transition: border-radius 0.2s;
 }
